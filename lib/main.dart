@@ -1,4 +1,5 @@
 import 'package:crypto_app/Screens/main_page.dart';
+import 'package:crypto_app/data/constants/contants.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,11 +12,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.blueGrey,
+        backgroundColor: greenColor,
+        body: SafeArea(
+          child: MainPage(),
         ),
-        body: MainPage(),
       ),
     );
   }
